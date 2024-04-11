@@ -1,5 +1,4 @@
-sentence = "The bird flew over the sky and there were 12 birds."
-# sentence = input("Enter your text: ")
+sentence = input("Enter your text: ")
 list = []
 
 def main():

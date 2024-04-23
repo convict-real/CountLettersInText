@@ -1,4 +1,8 @@
-sentence = input("Enter your text: ")
+input = input("Enter your text: ")
+
+if input[-1] == " ":
+    print("Text should not end with a space.")
+
 list = []
 
 def main():
@@ -7,7 +11,7 @@ def main():
     for char in "abcdefghijklmnopqrstuvwxyz":
         occurrences[char] = 0
 
-    for char in sentence.lower():
+    for char in input.lower():
         if char.isalpha():
             occurrences[char] += 1
 
@@ -17,7 +21,7 @@ def main():
     lowestCount = min(filtered_occurrences, key = filtered_occurrences.get)
 
     print(
-        f"Length: {len(sentence)}"
+        f"Characters: {len(input)}, Words: {len(input.split())}\n"
         f"Most used: {highestCount}, Least used: {lowestCount}"
     )
 
@@ -26,3 +30,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
